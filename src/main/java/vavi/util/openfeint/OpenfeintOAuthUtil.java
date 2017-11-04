@@ -83,7 +83,7 @@ public class OpenfeintOAuthUtil {
      */
     public String[] getAccessToken(String uid) throws IOException, OAuthException {
         try {
-            Map<String, String> params = new HashMap<String, String>();
+            Map<String, String> params = new HashMap<>();
             // iphone device no
             params.put("udid", udid);
             if (uid == null) {
@@ -171,7 +171,7 @@ public class OpenfeintOAuthUtil {
      * users/@me/settings.xml
      */
     public InputStream getResource(String url, String accessToken, String tokenSecret) throws IOException, OAuthException, URISyntaxException {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         return getResource(url, params, accessToken, tokenSecret);
     }
 
@@ -263,7 +263,7 @@ public class OpenfeintOAuthUtil {
         url = String.format(url, appid);
 System.err.println("url: " + url);
 
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         params.put("info_client_application_version", appVersion);
         params.put("info_client_application_bundle_id", appBundleId);
         params.put("info_client_openfeint_version", openfentVersion);

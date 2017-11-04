@@ -218,7 +218,7 @@ public class ResourceSections {
      */
     public List<ResourceSections.ResourceSection> getResourceSection() {
         if (resourceSection == null) {
-            resourceSection = new ArrayList<ResourceSections.ResourceSection>();
+            resourceSection = new ArrayList<>();
         }
         return this.resourceSection;
     }
@@ -616,7 +616,7 @@ public class ResourceSections {
              */
             public List<ResourceSections.ResourceSection.Resources.HighScore> getHighScore() {
                 if (highScore == null) {
-                    highScore = new ArrayList<ResourceSections.ResourceSection.Resources.HighScore>();
+                    highScore = new ArrayList<>();
                 }
                 return this.highScore;
             }

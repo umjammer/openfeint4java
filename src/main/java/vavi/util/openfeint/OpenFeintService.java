@@ -56,7 +56,7 @@ public class OpenFeintService {
     
     /** */
     public void setScore(long leaderboard, long score, String[] session) throws Exception {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         params.put("leaderboard_id", String.valueOf(leaderboard));
         params.put("high_score[score]", String.valueOf(score));
         params.put("high_score[lat]", "35.331689");
@@ -69,7 +69,7 @@ public class OpenFeintService {
      */
     public void rename(String name, String[] session) throws Exception {
         try {
-            Map<String, String> params = new HashMap<String, String>();
+            Map<String, String> params = new HashMap<>();
             params.put("user[name]", name);
             params.put("id", "me");
             util.postResource("users/update_name.xml", params, session[1], session[2]);
@@ -85,14 +85,14 @@ public class OpenFeintService {
     
     /** */
     public void unlockAchievement(long achievementId, String[] session) throws Exception {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         params.put("achievement_definition_id", String.valueOf(achievementId));
         util.getResource("users/@me/unlocked_achievements.xml", params, session[1], session[2]);
     }
 
     /** */ 
     public ResourceSections getLeaderboard(long leaderboard, String[] session) throws Exception {
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         params.put("leaderboard_id", String.valueOf(leaderboard));
         params.put("page", "1");
         params.put("page_size", "10");

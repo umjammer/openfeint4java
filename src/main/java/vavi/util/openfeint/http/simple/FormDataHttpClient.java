@@ -44,7 +44,7 @@ public class FormDataHttpClient implements HttpClient {
     public HttpResponseMessage execute(HttpMessage request, Map<String, Object> parameters) throws IOException {
         URL url = new URL(request.url.toExternalForm());
 System.err.println(url);
-            
+
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 //System.err.println(request.method);
         if (!request.method.equalsIgnoreCase("POST")) {
@@ -65,7 +65,7 @@ System.err.println(url);
                 conn.setConnectTimeout(10 * 1000);
             }
         }
-            
+
         for (Map.Entry<String, String> header : request.headers) {
 //System.err.println(header.getKey() + ": " + header.getValue());
             if ("Content-Type".equalsIgnoreCase(header.getKey())) {
@@ -77,7 +77,7 @@ System.err.println(url);
             }
         }
 
-        Map<String, String> params = new HashMap<String, String>();
+        Map<String, String> params = new HashMap<>();
         StringBuilder sb = new StringBuilder();
         InputStream is = request.getBody();
         if (is != null) {
