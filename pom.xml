@@ -12,7 +12,7 @@
     <name></name>
   </organization>
   <version>0.0.1</version>
-  <url>http://www.vavisoft.com/</url>
+  <url>https://github.com/umjammer/openfeint4java</url>
   <description></description>
   <build>
     <plugins>
@@ -46,4 +46,10 @@
       <version>1.4</version>
     </dependency>
   </dependencies>
+  <scm>
+    <url>https://github.com/umjammer/openfeint4java</url>
+  </scm>
+  <issueManagement>
+    <url>https://github.com/umjammer/openfeint4java/issues</url>
+  </issueManagement>
 </project>
